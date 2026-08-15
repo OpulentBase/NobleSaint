@@ -136,7 +136,7 @@ export function Contact() {
                         type="button"
                         onClick={() => toggleScope(s)}
                         aria-pressed={on}
-                        className={`border px-4 py-2 text-[0.875rem] transition-colors ${
+                        className={`border px-4 py-2.5 text-[0.875rem] transition-colors ${
                           on
                             ? "border-patina bg-patina text-limestone"
                             : "border-limestone/25 text-limestone/75 hover:border-limestone/60"
