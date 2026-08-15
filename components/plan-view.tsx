@@ -17,7 +17,9 @@ const legend: { id: LayerId; code: string; label: string; note: string }[] = [
 ];
 
 export function PlanView() {
-  const [active, setActive] = useState<LayerId | null>(null);
+  const [hovered, setHovered] = useState<LayerId | null>(null);
+  const [pinned, setPinned] = useState<LayerId | null>(null);
+  const active = pinned ?? hovered;
 
   const layer = (id: LayerId) =>
     `transition-[opacity,color] duration-500 ${
@@ -33,54 +35,17 @@ export function PlanView() {
       />
 
       <div className="mt-14 grid gap-10 lg:grid-cols-12 lg:gap-12">
-        {/* Legend — the interactive control */}
-        <div className="lg:col-span-3 lg:order-2">
-          <p className="sheet-label">Legend · hover a layer</p>
-          <ul className="mt-5 flex flex-col border-t border-cypress/15">
-            {legend.map((l) => (
-              <li key={l.id}>
-                <button
-                  type="button"
-                  onMouseEnter={() => setActive(l.id)}
-                  onMouseLeave={() => setActive(null)}
-                  onFocus={() => setActive(l.id)}
-                  onBlur={() => setActive(null)}
-                  onClick={() => setActive((a) => (a === l.id ? null : l.id))}
-                  aria-pressed={active === l.id}
-                  className={`flex w-full flex-col items-start gap-1 border-b border-cypress/15 py-3.5 text-left transition-colors ${
-                    active === l.id ? "text-patina" : "text-cypress hover:text-patina"
-                  }`}
-                >
-                  <span className="flex w-full items-baseline gap-3">
-                    <span className="font-draft text-[0.66rem] tracking-[0.1em] text-graphite">{l.code}</span>
-                    <span className="text-[0.95rem]">{l.label}</span>
-                    <span
-                      className={`ml-auto h-2 w-2 shrink-0 rotate-45 border transition-colors ${
-                        active === l.id ? "border-patina bg-patina" : "border-cypress/40"
-                      }`}
-                      aria-hidden="true"
-                    />
-                  </span>
-                  <span className="text-[0.8rem] leading-snug text-cypress/55">{l.note}</span>
-                </button>
-              </li>
-            ))}
-          </ul>
-          <p className="mt-5 text-[0.8rem] leading-relaxed text-cypress/55">
-            Drawing shown is representative. Your plan is measured on your property.
-          </p>
-        </div>
-
         {/* The drawing */}
         <Reveal
           delay={100}
           threshold={0.08}
-          className="relative isolate overflow-hidden border border-cypress/20 bg-limestone lg:col-span-9 lg:order-1"
+          className="relative isolate overflow-hidden border border-cypress/20 bg-limestone lg:col-span-9"
         >
           <PaperTooth className="opacity-30" />
+          <div className="relative overflow-x-auto overscroll-x-contain">
           <svg
             viewBox="0 0 1200 780"
-            className="relative block h-auto w-full text-cypress"
+            className="relative block h-auto w-full min-w-[900px] text-cypress"
             fill="none"
             role="img"
             aria-label="Top-down site plan of a rear yard showing a terrace, gunite pool with raised spa, pergola, outdoor kitchen, fire pit, planting beds, drainage and lighting."
@@ -347,6 +312,11 @@ export function PlanView() {
               58&apos;-0&quot;
             </text>
           </svg>
+          </div>
+
+          <p className="sheet-label relative border-t border-cypress/15 px-5 pt-3 lg:hidden">
+            Swipe the drawing to read the full plan
+          </p>
 
           {/* drawing title block */}
           <div className="relative flex flex-wrap items-center gap-x-8 gap-y-3 border-t border-cypress/20 px-5 py-4 sm:px-7">
@@ -373,6 +343,51 @@ export function PlanView() {
             </div>
           </div>
         </Reveal>
+        {/* Legend — the interactive control */}
+        <div className="lg:col-span-3">
+          <p className="sheet-label">Legend · select a layer to isolate it</p>
+          <ul className="mt-5 flex flex-col border-t border-cypress/15">
+            {legend.map((l) => (
+              <li key={l.id}>
+                <button
+                  type="button"
+                  onPointerEnter={(e) => {
+                    if (e.pointerType === "mouse") setHovered(l.id);
+                  }}
+                  onPointerLeave={(e) => {
+                    if (e.pointerType === "mouse") setHovered(null);
+                  }}
+                  onFocus={() => setHovered(l.id)}
+                  onBlur={() => setHovered(null)}
+                  onClick={() => {
+                    setHovered(null);
+                    setPinned((prev) => (prev === l.id ? null : l.id));
+                  }}
+                  aria-pressed={active === l.id}
+                  className={`flex w-full flex-col items-start gap-1 border-b border-cypress/15 py-3.5 text-left transition-colors ${
+                    active === l.id ? "text-patina" : "text-cypress hover:text-patina"
+                  }`}
+                >
+                  <span className="flex w-full items-baseline gap-3">
+                    <span className="font-draft text-[0.66rem] tracking-[0.1em] text-graphite">{l.code}</span>
+                    <span className="text-[0.95rem]">{l.label}</span>
+                    <span
+                      className={`ml-auto h-2 w-2 shrink-0 rotate-45 border transition-colors ${
+                        active === l.id ? "border-patina bg-patina" : "border-cypress/40"
+                      }`}
+                      aria-hidden="true"
+                    />
+                  </span>
+                  <span className="text-[0.8rem] leading-snug text-cypress/55">{l.note}</span>
+                </button>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-5 text-[0.8rem] leading-relaxed text-cypress/55">
+            Drawing shown is representative. Your plan is measured on your property.
+          </p>
+        </div>
+
       </div>
     </section>
   );
@@ -383,7 +398,9 @@ function labelStyle(size: number): React.CSSProperties {
   // the whole declaration in renderers that do not resolve the var().
   return {
     fontFamily: "var(--font-draft)",
-    fontSize: `${size}px`,
+    // Call sites use true drafting sizes; this lifts them to stay legible
+    // once the 1200-unit drawing is scaled down to fit a screen.
+    fontSize: `${(size * 1.18).toFixed(2)}px`,
     fontWeight: 500,
     letterSpacing: "0.12em",
   };
