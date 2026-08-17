@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     template: `%s | ${site.name}`,
   },
   description:
-    "A father-and-son build team designing and constructing landscapes, hardscapes and pools across Orange County and Los Angeles. Twenty years on site. Call or text (714) 585-6835.",
+    "A father-and-son build team designing and constructing landscapes, hardscapes and pools across Orange County and Los Angeles. Nearly thirty years on site. Call or text (714) 585-6835.",
   keywords: [
     "landscape contractor Orange County",
     "landscape contractor Los Angeles",
@@ -49,12 +49,12 @@ export const metadata: Metadata = {
     siteName: site.name,
     title: `${site.name} | Landscapes, Hardscapes & Pools`,
     description:
-      "Twenty years of building outdoor space in Orange County and Los Angeles. Design, hardscape and pool construction by a father-and-son team.",
+      "Nearly thirty years of building outdoor space in Orange County and Los Angeles. Design, hardscape and pool construction by a father-and-son team.",
   },
   twitter: {
     card: "summary_large_image",
     title: `${site.name} | Landscapes, Hardscapes & Pools`,
-    description: "Design and build for Orange County and Los Angeles properties. Family owned since 2004.",
+    description: "Design and build for Orange County and Los Angeles properties. Family owned since 1997.",
   },
   robots: { index: true, follow: true },
 };
