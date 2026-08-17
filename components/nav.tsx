@@ -33,7 +33,7 @@ export function Nav() {
         <a
           href="#top"
           className="shrink-0 text-cypress transition-opacity hover:opacity-70"
-          aria-label={`${site.name} — back to top`}
+          aria-label={`${site.name}, back to top`}
         >
           <Wordmark className="text-[0.82rem] sm:text-[0.95rem]" />
         </a>
