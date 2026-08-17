@@ -11,10 +11,10 @@ const lines = [
 
 export function Hero() {
   return (
-    <section id="top" className="relative isolate flex min-h-svh flex-col overflow-hidden pt-28 sm:pt-36">
+    <section id="top" className="relative isolate flex flex-col overflow-hidden pt-28 sm:pt-36 lg:min-h-svh">
       <PaperTooth />
 
-      <div className="relative z-20 mx-auto flex w-full max-w-[1440px] flex-1 flex-col justify-center px-5 pb-20 sm:px-8 sm:pb-28 lg:px-12">
+      <div className="relative z-20 mx-auto flex w-full max-w-[1440px] flex-1 flex-col justify-center px-5 pb-12 sm:px-8 sm:pb-16 lg:px-12 lg:pb-24">
         <Reveal className="flex flex-wrap items-baseline gap-x-5 gap-y-1">
           <span className="sheet-label text-cypress/70">{site.region}</span>
           <span className="h-px w-6 bg-brass sm:w-8" aria-hidden="true" />
