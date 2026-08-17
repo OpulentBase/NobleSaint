@@ -42,7 +42,7 @@ export function Hero() {
         <Reveal delay={560} className="mt-8 flex max-w-[62ch] flex-col gap-6 sm:mt-9 sm:gap-7">
           <p className="text-[length:var(--text-sub)] leading-relaxed text-cypress/80">
             A father and his oldest son, building outdoor space across {site.regionLong} for twenty
-            years. New front yards, whole rear yards, pools brought back from the dead — drawn and
+            years. New front yards, whole rear yards, pools brought back from the dead, all drawn and
             built by the same two names that answer the phone.
           </p>
 
@@ -79,7 +79,7 @@ export function Hero() {
       </Reveal>
 
       <div className="absolute right-5 bottom-6 z-20 flex items-end gap-5 sm:right-8 lg:right-12">
-        <span className="sheet-label hidden lg:block">Section A–A · 1:100</span>
+        <span className="sheet-label hidden lg:block">Section A-A · 1:100</span>
         <NorthArrow className="hidden h-11 w-auto text-cypress/60 sm:block" />
       </div>
     </section>
