@@ -95,10 +95,10 @@ export function PlanView() {
               {/* seat wall */}
               <path d="M500 672h480" stroke="currentColor" strokeWidth="6" strokeLinecap="square" opacity="0.9" />
               <text x="740" y="662" textAnchor="middle" className="fill-current" style={labelStyle(9)}>
-                SEAT WALL — 18&quot; H
+                SEAT WALL, 18&quot; H
               </text>
               <text x="502" y="336" textAnchor="middle" className="fill-current" style={labelStyle(10)}>
-                TRAVERTINE — FRENCH PATTERN
+                TRAVERTINE, FRENCH PATTERN
               </text>
             </g>
 
@@ -140,7 +140,7 @@ export function PlanView() {
                 />
               </g>
               <text x="593" y="388" textAnchor="middle" className="fill-current" style={labelStyle(11)}>
-                GUNITE POOL — 28&apos;-0&quot; × 15&apos;-0&quot;
+                GUNITE POOL 28&apos;-0&quot; × 15&apos;-0&quot;
               </text>
               <text x="878" y="578" textAnchor="middle" className="fill-current" style={labelStyle(10)}>
                 RAISED SPA
@@ -233,7 +233,7 @@ export function PlanView() {
                 ))}
               </g>
               <text x="1074" y="572" textAnchor="middle" className="fill-current" style={labelStyle(10)}>
-                OLIVE — 48&quot; BOX
+                OLIVE, 48&quot; BOX
               </text>
               <text x="110" y="562" textAnchor="middle" className="fill-current" style={labelStyle(9.5)}>
                 LOW-WATER BED
