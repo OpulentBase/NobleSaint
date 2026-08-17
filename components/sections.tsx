@@ -47,7 +47,7 @@ export function Band() {
 
 export function Proof() {
   const points = [
-    { k: "20+ yrs", v: "Father and son, since 2004" },
+    { k: "Since 1997", v: "Father and son, nearly 30 years" },
     { k: "OC & LA", v: "Orange County and Los Angeles" },
     { k: "Free", v: "On-site estimates, no obligation" },
     { k: "One crew", v: "The team that starts, finishes" },
@@ -123,7 +123,7 @@ export function Firm() {
           <Reveal className="lg:col-span-7 lg:col-start-1">
             <div className="flex flex-col gap-6 text-[1.0625rem] leading-[1.75] text-limestone/78">
               <p>
-                My father began this business over twenty years ago. Being his oldest son, I felt the
+                My father began this business back in 1997. Being his oldest son, I felt the
                 responsibility of helping him take our family business to the next level. I have been
                 learning from him since I was a kid, starting with the fundamentals of the home
                 improvement industry.
@@ -161,7 +161,7 @@ export function Firm() {
 /** A drafted datum line: the two generations, plotted against real years. */
 function Timeline() {
   const marks = [
-    { year: "2004", label: "Father breaks ground on the first job" },
+    { year: "1997", label: "Father breaks ground on the first job" },
     { year: "2011", label: "Pool construction added to the scope" },
     { year: "2019", label: "Second generation takes on design" },
     { year: "Today", label: "Still one crew, still one name" },
