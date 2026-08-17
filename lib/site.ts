@@ -10,7 +10,7 @@ export const site = {
     // The `?&` form is what works on both iOS and Android.
     smsHref:
       "sms:+17145856835?&body=" +
-      encodeURIComponent("Hi Alfredo — I'd like a quote on my yard. "),
+      encodeURIComponent("Hi Alfredo, I'd like a quote on my yard. "),
   },
   region: "Orange County & Los Angeles",
   regionLong: "Orange County and Los Angeles",
