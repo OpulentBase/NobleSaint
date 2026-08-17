@@ -3,7 +3,7 @@ import { site } from "@/lib/site";
 
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
-export const alt = `${site.name} — Landscapes, Hardscapes and Pools in Orange County and Los Angeles`;
+export const alt = `${site.name}: Landscapes, Hardscapes and Pools in Orange County and Los Angeles`;
 
 // Social card generated at build time. No image files ship with this project.
 export default function OpengraphImage() {
