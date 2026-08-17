@@ -14,7 +14,7 @@ export const site = {
   },
   region: "Orange County & Los Angeles",
   regionLong: "Orange County and Los Angeles",
-  founded: 2004,
+  founded: 1997,
   // Add your CSLB number here and it appears in the footer automatically.
   // Leave it empty and nothing is shown.
   license: "",
@@ -112,8 +112,8 @@ export const standards = [
     body: "Compaction, drainage and footing depth get done to spec even though no one will ever see them. That is the whole difference at year ten.",
   },
   {
-    title: "A father's twenty years",
-    body: "Two decades of what holds and what fails in this soil and this climate, applied to every detail we draw.",
+    title: "A father's three decades",
+    body: "Nearly thirty years of what holds and what fails in this soil and this climate, applied to every detail we draw.",
   },
   {
     title: "The property stays lived in",
