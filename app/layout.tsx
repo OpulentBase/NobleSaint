@@ -26,7 +26,7 @@ const plexMono = IBM_Plex_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.name} — Landscapes, Hardscapes & Pools | Orange County & LA`,
+    default: `${site.name} | Landscapes, Hardscapes & Pools | Orange County & LA`,
     template: `%s | ${site.name}`,
   },
   description:
@@ -47,13 +47,13 @@ export const metadata: Metadata = {
     type: "website",
     url: site.url,
     siteName: site.name,
-    title: `${site.name} — Landscapes, Hardscapes & Pools`,
+    title: `${site.name} | Landscapes, Hardscapes & Pools`,
     description:
       "Twenty years of building outdoor space in Orange County and Los Angeles. Design, hardscape and pool construction by a father-and-son team.",
   },
   twitter: {
     card: "summary_large_image",
-    title: `${site.name} — Landscapes, Hardscapes & Pools`,
+    title: `${site.name} | Landscapes, Hardscapes & Pools`,
     description: "Design and build for Orange County and Los Angeles properties. Family owned since 2004.",
   },
   robots: { index: true, follow: true },
