@@ -37,7 +37,7 @@ export default function OpengraphImage() {
         </div>
 
         <div style={{ display: "flex", justifyContent: "space-between", color: "#93a89f", fontSize: 24, letterSpacing: 4 }}>
-          <div style={{ display: "flex" }}>FAMILY OWNED SINCE 2004</div>
+          <div style={{ display: "flex" }}>FAMILY OWNED SINCE {site.founded}</div>
           <div style={{ display: "flex", color: "#a67c3d" }}>CALL OR TEXT {site.contact.phone}</div>
         </div>
       </div>
