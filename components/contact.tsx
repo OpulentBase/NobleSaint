@@ -52,7 +52,7 @@ export function Contact() {
             </div>
 
             <p className="mt-5 text-[0.875rem] leading-relaxed text-limestone/60">
-              Texting is often fastest. Send a photo of the yard and roughly what you have in mind,
+              Texting is often fastest. Send a photo of the space and roughly what you have in mind,
               and you will usually hear back the same day.
             </p>
           </Reveal>
