@@ -17,7 +17,7 @@ export function Contact() {
           code="Get started"
           title="Call or text Alfredo."
           tone="light-on-dark"
-          intro={`You get Alfredo directly — not a call centre and not a form. Tell him where the property is and what you are thinking, and he will set a time to come look at it. Estimates across ${site.regionLong} are free.`}
+          intro={`You get Alfredo directly, not a call center and not a form. Tell him where the property is and what you are thinking, and he will set a time to come look at it. Estimates across ${site.regionLong} are free.`}
         />
 
         <div className="mt-12 grid gap-12 lg:mt-16 lg:grid-cols-12 lg:gap-16">
