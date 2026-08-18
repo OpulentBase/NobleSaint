@@ -69,7 +69,7 @@ export function Hero() {
           </Reveal>
         </h1>
 
-        <Reveal delay={400} className="mt-6 flex max-w-[52ch] flex-col gap-5 sm:mt-8 sm:gap-6">
+        <Reveal delay={400} className="mt-5 flex max-w-[52ch] flex-col gap-4 sm:mt-8 sm:gap-6">
           <p className="text-[1.0625rem] leading-relaxed text-limestone/85 sm:text-[length:var(--text-sub)]">
             Landscapes, hardscapes and pools across {site.regionLong}.
             <span className="hidden sm:inline">
@@ -83,18 +83,16 @@ export function Hero() {
           <div className="flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:items-center">
             <a
               href={site.contact.phoneHref}
-              className="flex items-center justify-center gap-3 bg-limestone px-6 py-4 text-cypress transition-colors hover:bg-brass sm:justify-start sm:py-3.5"
+              className="flex items-center justify-center gap-3 bg-limestone px-6 py-3.5 text-cypress transition-colors hover:bg-brass sm:justify-start"
             >
               <PhoneGlyph className="h-4 w-4" />
               <span className="text-[0.98rem] tracking-wide">
                 Call <span className="tabular-nums">{site.contact.phone}</span>
               </span>
             </a>
-            {/* Hidden on phones: the fixed bar at the bottom already carries
-                Text, and the extra button only pushes the photo out of frame. */}
             <a
               href={site.contact.smsHref}
-              className="hidden items-center justify-center gap-3 border border-limestone/45 px-6 py-4 text-[0.98rem] tracking-wide text-limestone backdrop-blur-sm transition-colors hover:border-limestone hover:bg-limestone/10 sm:flex sm:justify-start sm:py-3.5"
+              className="flex items-center justify-center gap-3 border border-limestone/45 px-6 py-3.5 text-[0.98rem] tracking-wide text-limestone backdrop-blur-sm transition-colors hover:border-limestone hover:bg-limestone/10 sm:justify-start"
             >
               <TextGlyph className="h-4 w-4" />
               Text us a photo
