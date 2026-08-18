@@ -91,12 +91,11 @@ export function Vision() {
           code="The vision"
           title="What your property could become."
           tone="light-on-dark"
-          intro="Design concepts showing the materials, lighting and detail that go into a build. Filter by what you have in mind, then call or text and we will talk through what fits your property."
         />
 
         {/* Chips scroll sideways rather than wrapping into a block that pushes
             the images off the first screen. */}
-        <Reveal delay={80} className="mt-8 -mx-5 sm:mx-0">
+        <Reveal delay={80} className="mt-9 -mx-5 sm:mx-0">
           <div className="flex gap-2.5 overflow-x-auto overscroll-x-contain px-5 pb-1 [-ms-overflow-style:none] [scrollbar-width:none] [touch-action:pan-x_pan-y] sm:flex-wrap sm:overflow-visible sm:px-0 [&::-webkit-scrollbar]:hidden">
             <FilterChip label="Everything" on={active === null} onClick={() => setActive(null)} />
             {tags.map((t) => (
@@ -174,28 +173,26 @@ export function Vision() {
           ))}
         </div>
 
-        <Reveal delay={120} className="mt-10 flex flex-col gap-5 border-t border-limestone/15 pt-8">
-          <p className="max-w-[56ch] text-[0.95rem] leading-relaxed text-limestone/70">
-            Concepts shown are design references, not photographs of completed jobs. Send a photo of
-            your space and we will tell you honestly what is possible on it.
-          </p>
-          <div className="flex flex-col gap-2.5 sm:flex-row sm:items-center">
-            <a
-              href={site.contact.phoneHref}
-              className="flex items-center justify-center gap-3 bg-limestone px-6 py-3.5 text-[0.95rem] tracking-wide text-cypress transition-colors hover:bg-brass sm:justify-start"
-            >
-              <PhoneGlyph className="h-4 w-4" />
-              Call {site.contact.phone}
-            </a>
-            <a
-              href={site.contact.smsHref}
-              className="flex items-center justify-center gap-3 border border-limestone/40 px-6 py-3.5 text-[0.95rem] tracking-wide text-limestone transition-colors hover:border-limestone hover:bg-limestone/10 sm:justify-start"
-            >
-              <TextGlyph className="h-4 w-4" />
-              Let&apos;s create your project
-            </a>
-          </div>
+        <Reveal
+          delay={120}
+          className="mt-10 flex flex-col gap-2.5 border-t border-limestone/15 pt-8 sm:flex-row sm:items-center"
+        >
+          <a
+            href={site.contact.phoneHref}
+            className="flex items-center justify-center gap-3 bg-limestone px-6 py-3.5 text-[0.95rem] tracking-wide text-cypress transition-colors hover:bg-brass"
+          >
+            <PhoneGlyph className="h-4 w-4" />
+            Call {site.contact.phone}
+          </a>
+          <a
+            href={site.contact.smsHref}
+            className="flex items-center justify-center gap-3 border border-limestone/40 px-6 py-3.5 text-[0.95rem] tracking-wide text-limestone transition-colors hover:border-limestone hover:bg-limestone/10"
+          >
+            <TextGlyph className="h-4 w-4" />
+            Let&apos;s create your project
+          </a>
         </Reveal>
+
       </div>
     </section>
   );
