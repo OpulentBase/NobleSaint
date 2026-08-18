@@ -69,17 +69,7 @@ export function Hero() {
           </Reveal>
         </h1>
 
-        <Reveal delay={400} className="mt-5 flex max-w-[52ch] flex-col gap-4 sm:mt-8 sm:gap-6">
-          <p className="text-[1.0625rem] leading-relaxed text-limestone/85 sm:text-[length:var(--text-sub)]">
-            Landscapes, hardscapes and pools across {site.regionLong}.
-            <span className="hidden sm:inline">
-              {" "}
-              A father and his oldest son, building outdoor space for nearly thirty years, drawn and
-              built by the same two names that answer the phone.
-            </span>
-            <span className="sm:hidden"> Father and son, nearly thirty years.</span>
-          </p>
-
+        <Reveal delay={400} className="mt-8 flex max-w-[52ch] flex-col gap-4 sm:mt-10 sm:gap-5">
           <div className="flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:items-center">
             <a
               href={site.contact.phoneHref}
@@ -95,7 +85,7 @@ export function Hero() {
               className="flex items-center justify-center gap-3 border border-limestone/45 px-6 py-3.5 text-[0.98rem] tracking-wide text-limestone backdrop-blur-sm transition-colors hover:border-limestone hover:bg-limestone/10 sm:justify-start"
             >
               <TextGlyph className="h-4 w-4" />
-              Text us a photo
+              Let&apos;s create your project
             </a>
           </div>
 
