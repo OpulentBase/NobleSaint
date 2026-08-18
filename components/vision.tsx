@@ -97,7 +97,7 @@ export function Vision() {
         {/* Chips scroll sideways rather than wrapping into a block that pushes
             the images off the first screen. */}
         <Reveal delay={80} className="mt-8 -mx-5 sm:mx-0">
-          <div className="flex gap-2.5 overflow-x-auto px-5 pb-1 [-ms-overflow-style:none] [scrollbar-width:none] sm:flex-wrap sm:overflow-visible sm:px-0 [&::-webkit-scrollbar]:hidden">
+          <div className="flex gap-2.5 overflow-x-auto overscroll-x-contain px-5 pb-1 [-ms-overflow-style:none] [scrollbar-width:none] [touch-action:pan-x_pan-y] sm:flex-wrap sm:overflow-visible sm:px-0 [&::-webkit-scrollbar]:hidden">
             <FilterChip label="Everything" on={active === null} onClick={() => setActive(null)} />
             {tags.map((t) => (
               <FilterChip
@@ -123,7 +123,7 @@ export function Vision() {
 
         {/* Phones get a swipeable lookbook — six tall cards stacked vertically
             was three and a half screens of scrolling. Desktop keeps the mosaic. */}
-        <div className="mt-4 -mx-5 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-2 [-ms-overflow-style:none] [scrollbar-width:none] sm:mx-0 sm:px-0 lg:mx-0 lg:grid lg:grid-cols-3 lg:gap-6 lg:overflow-visible lg:px-0 [&::-webkit-scrollbar]:hidden">
+        <div className="mt-4 -mx-5 flex snap-x snap-mandatory scroll-px-5 gap-4 overflow-x-auto overflow-y-hidden overscroll-x-contain px-5 pb-2 [-ms-overflow-style:none] [scrollbar-width:none] [touch-action:pan-x_pan-y] sm:mx-0 sm:px-0 lg:mx-0 lg:grid lg:grid-cols-3 lg:gap-6 lg:overflow-visible lg:px-0 lg:[touch-action:auto] [&::-webkit-scrollbar]:hidden">
           {visible.map((s, i) => (
             <Reveal
               key={s.src}
@@ -133,7 +133,7 @@ export function Vision() {
                 s.tall ? "lg:row-span-2" : ""
               }`}
             >
-              <figure className="group relative h-full overflow-hidden bg-cypress-70">
+              <figure className="group relative h-full overflow-hidden bg-cypress-70 select-none">
                 <div
                   className={`relative w-full ${
                     s.tall ? "aspect-[4/5] lg:aspect-[2/3]" : "aspect-[4/5]"
@@ -146,7 +146,8 @@ export function Vision() {
                     sizes="(min-width: 1024px) 33vw, (min-width: 640px) 58vw, 82vw"
                     quality={78}
                     loading="lazy"
-                    className="object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-[1.04]"
+                    draggable={false}
+                    className="pointer-events-none object-cover select-none transition-transform duration-[1.2s] ease-out [-webkit-touch-callout:none] [-webkit-user-drag:none] group-hover:scale-[1.04]"
                   />
                   <div
                     className="absolute inset-0 bg-gradient-to-t from-cypress via-cypress/45 to-transparent"
