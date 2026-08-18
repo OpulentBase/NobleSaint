@@ -1,7 +1,7 @@
 import { Nav } from "@/components/nav";
 import { Hero } from "@/components/hero";
 import { Band, Proof, Scope, Firm, Sequence, Standards } from "@/components/sections";
-import { PlanView } from "@/components/plan-view";
+import { Vision } from "@/components/vision";
 import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
 import { CallBar } from "@/components/call-bar";
@@ -18,7 +18,7 @@ export default function Page() {
         <Proof />
         <Scope />
         <Firm />
-        <PlanView />
+        <Vision />
         <Sequence />
         <Standards />
         <Contact />
