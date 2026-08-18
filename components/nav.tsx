@@ -7,7 +7,7 @@ import { site } from "@/lib/site";
 const sections = [
   { href: "#scope", label: "What we build" },
   { href: "#firm", label: "The firm" },
-  { href: "#plan", label: "Site plan" },
+  { href: "#vision", label: "The vision" },
   { href: "#sequence", label: "How it works" },
 ];
 
