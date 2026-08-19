@@ -242,7 +242,7 @@ export function Sequence() {
                 <p className="font-draft text-[0.68rem] tracking-[0.16em] text-brass uppercase">
                   {step.meta}
                 </p>
-                <h3 className="mt-3 flex items-baseline gap-4 font-display text-[1.75rem] leading-[1.1] font-light sm:text-[2.125rem] lg:justify-start">
+                <h3 className="mt-3 flex items-baseline gap-4 font-display text-[1.5rem] leading-[1.15] font-light tracking-[0.05em] uppercase sm:text-[2rem] lg:justify-start">
                   <span
                     className={`font-draft text-[0.8rem] tracking-[0.1em] text-cypress/30 tabular-nums ${
                       i % 2 === 0 ? "lg:order-2" : ""
