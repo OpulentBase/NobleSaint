@@ -73,31 +73,31 @@ export const sequence = [
   {
     n: "01",
     meta: "Free · on your property",
-    title: "We walk it with you",
+    title: "Walk the property",
     body: "We meet at your home and look at grade, drainage, sun, soil and how you already use the yard. No charge and no pressure.",
   },
   {
     n: "02",
     meta: "Fixed written price",
-    title: "We draw the plan",
+    title: "Create a plan",
     body: "You get a plan and a written scope with materials named, dimensions called out and a line-item price. What is in the plan is what gets built.",
   },
   {
     n: "03",
     meta: "The part nobody sees",
-    title: "We build the base",
+    title: "The foundation",
     body: "Demo, grading, drainage, footings, plumbing and electrical. The work nobody photographs is the work that decides how the project ages.",
   },
   {
     n: "04",
     meta: "Alfredo on site",
-    title: "We set the finish",
+    title: "Finishing touches",
     body: "Stone, plaster, coping, planting and lighting. Alfredo is here through finish work, not just at the signing.",
   },
   {
     n: "05",
     meta: "And we stay reachable",
-    title: "We hand it over",
+    title: "Turn in",
     body: "We walk the property together, correct anything on the list, and show you how to run the equipment.",
   },
 ];
