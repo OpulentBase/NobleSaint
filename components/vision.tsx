@@ -88,7 +88,7 @@ export function Vision() {
     <section id="vision" className="relative isolate overflow-hidden bg-cypress text-limestone">
       <div className="relative mx-auto w-full max-w-[1440px] px-5 py-plate sm:px-8 lg:px-12">
         <SheetHead
-          code="The vision"
+          code="Vision"
           title="What your property could become."
           tone="light-on-dark"
         />
