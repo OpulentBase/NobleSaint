@@ -72,7 +72,7 @@ export function Scope() {
   return (
     <section id="scope" className="relative mx-auto w-full max-w-[1440px] px-5 py-plate sm:px-8 lg:px-12">
       <SheetHead
-        code="What we build"
+        code="Our trades"
         title="Three trades, one crew."
         intro="Most yards need all three. Keeping them under one contract is what keeps the grade, the stone and the water line working together instead of against each other."
       />
@@ -117,7 +117,7 @@ export function Firm() {
     <section id="firm" className="relative isolate overflow-hidden bg-cypress text-limestone">
       <PaperTooth className="opacity-[0.28]" />
       <div className="relative mx-auto w-full max-w-[1440px] px-5 py-plate sm:px-8 lg:px-12">
-        <SheetHead code="The firm" title="It started with my father." tone="light-on-dark" />
+        <SheetHead code="History" title="It started with my father." tone="light-on-dark" />
 
         <div className="mt-12 grid gap-12 sm:mt-16 lg:grid-cols-12 lg:gap-16">
           <Reveal className="lg:col-span-7 lg:col-start-1">
@@ -204,7 +204,7 @@ export function Sequence() {
       <PaperTooth className="opacity-30" />
       <div className="relative mx-auto w-full max-w-[1440px] px-5 py-plate sm:px-8 lg:px-12">
         <SheetHead
-          code="How it works"
+          code="Our process"
           title="Five stages, start to handover."
           intro="Order decides everything in this trade. Here is how a project runs, and where you hear from us in each stage."
         />
