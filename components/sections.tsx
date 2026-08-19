@@ -268,7 +268,7 @@ export function Sequence() {
 
 export function Standards() {
   return (
-    <section id="standards" className="relative mx-auto w-full max-w-[1440px] px-5 pb-plate sm:px-8 lg:px-12">
+    <section id="standards" className="relative mx-auto w-full max-w-[1440px] px-5 py-plate sm:px-8 lg:px-12">
       <SheetHead code="How we work" title="What we hold to." />
 
       <div className="mt-12 grid gap-px sm:mt-14 sm:grid-cols-2">
