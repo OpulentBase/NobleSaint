@@ -5,10 +5,10 @@ import { Wordmark } from "./marks";
 import { site } from "@/lib/site";
 
 const sections = [
-  { href: "#scope", label: "What we build" },
-  { href: "#firm", label: "The firm" },
-  { href: "#vision", label: "The vision" },
-  { href: "#sequence", label: "How it works" },
+  { href: "#scope", label: "Our Trades" },
+  { href: "#firm", label: "History" },
+  { href: "#vision", label: "Vision" },
+  { href: "#sequence", label: "Our Process" },
 ];
 
 export function Nav() {
@@ -38,10 +38,10 @@ export function Nav() {
           <Wordmark className="text-[0.82rem] sm:text-[0.95rem]" />
         </a>
 
-        <ul className="ml-auto hidden items-center gap-8 lg:flex">
+        <ul className="ml-auto hidden items-center gap-7 lg:flex xl:gap-9">
           {sections.map((s) => (
             <li key={s.href}>
-              <a href={s.href} className={`text-[0.85rem] transition-colors ${lifted ? "text-cypress/70 hover:text-cypress" : "text-limestone/80 hover:text-limestone"}`}>
+              <a href={s.href} className={`text-[0.78rem] tracking-[0.13em] uppercase transition-colors ${lifted ? "text-cypress/70 hover:text-cypress" : "text-limestone/80 hover:text-limestone"}`}>
                 {s.label}
               </a>
             </li>
