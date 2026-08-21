@@ -47,17 +47,17 @@ export function Band() {
 
 export function Proof() {
   const points = [
-    { k: "Established 1997", v: "30 years of history, family & growth" },
-    { k: "Southern California", v: "Orange County | Los Angeles" },
-    { k: "On-site consultations", v: "Property walk-through scheduled free of commitment" },
-    { k: "Noble Saint", v: "Modern world touch, with old school ways" },
+    { k: "Established 1997", v: "30 years of history, family & growth." },
+    { k: "Serving Southern California", v: "Orange County | Los Angeles" },
+    { k: "On site consultations", v: "Property walk through schedule free of commitment" },
+    { k: "Noble Saint", v: "Modern world touch, with old school ways." },
   ];
   return (
     <section className="mx-auto w-full max-w-[1440px] px-5 pt-14 sm:px-8 sm:pt-20 lg:px-12">
       <dl className="grid grid-cols-2 gap-x-5 gap-y-8 border-y border-cypress/12 py-8 sm:gap-x-10 lg:grid-cols-4">
         {points.map((p, i) => (
           <Reveal key={p.k} delay={i * 80} className="flex flex-col gap-1.5">
-            <dt className="font-display text-[1.25rem] leading-[1.15] font-light text-balance sm:text-[1.5rem]">{p.k}</dt>
+            <dt className="font-display text-[1.05rem] leading-[1.2] font-light tracking-[0.04em] text-balance uppercase sm:text-[1.3rem]">{p.k}</dt>
             <dd className="text-[0.82rem] leading-snug text-cypress/65 sm:text-[0.85rem]">{p.v}</dd>
           </Reveal>
         ))}
@@ -73,8 +73,8 @@ export function Scope() {
     <section id="scope" className="relative mx-auto w-full max-w-[1440px] px-5 py-plate sm:px-8 lg:px-12">
       <SheetHead
         code="Our trades"
-        title="Outdoor living."
-        intro="We have grown into a complete design and build company. We started with beautiful landscapes, stepped into construction and hardscapes, and now we build just about anything a person could imagine their back yard to be. Let us bring your new dream to life."
+        title="Outdoor Living"
+        intro="We've grown into a complete design and build company. We started with beautiful landscapes stepped into construction and hardscapes. Now we are building just about anything that a person could imagine their back yard to be. Let us bring your new dream to life."
       />
 
       <div className="mt-12 grid gap-px border-t border-cypress/12 sm:mt-16 lg:grid-cols-3">
@@ -117,7 +117,7 @@ export function Firm() {
     <section id="firm" className="relative isolate overflow-hidden bg-cypress text-limestone">
       <PaperTooth className="opacity-[0.28]" />
       <div className="relative mx-auto w-full max-w-[1440px] px-5 py-plate sm:px-8 lg:px-12">
-        <SheetHead code="History" title="Noble Saint's history." tone="light-on-dark" />
+        <SheetHead code="History" title="Noble Saint's History" tone="light-on-dark" />
 
         <div className="mt-12 grid gap-12 sm:mt-16 lg:grid-cols-12 lg:gap-16">
           <Reveal className="lg:col-span-7 lg:col-start-1">
@@ -129,8 +129,8 @@ export function Firm() {
                 Los Angeles and Orange County.
               </p>
               <p>
-                Our experience was built in the field, property by property, neighborhood by
-                neighborhood. Over the years we expanded from landscaping into hardscapes, pools and
+                Our experience was built in the field property by property, neighborhood by
+                neighborhood. Over the years, we expanded from landscaping into hardscapes, pools and
                 complete outdoor construction, bringing each discipline together under one company
                 and one standard of work.
               </p>
@@ -168,9 +168,9 @@ export function Firm() {
 /** A drafted datum line: the two generations, plotted against real years. */
 function Timeline() {
   const marks = [
-    { year: "1997", label: "Father breaks ground on his first landscaping project in California" },
+    { year: "1997", label: "Father breaks ground on first landscaping project in California" },
     { year: "2010", label: "We begin offering construction services" },
-    { year: "2016", label: "I begin helping my father run the business and introduce our company to the modern world" },
+    { year: "2016", label: "I begin to help my father run the business and introduce our company to the modern world" },
     { year: "2026", label: "Lots of story, same family. New name." },
   ];
 
@@ -214,7 +214,7 @@ export function Sequence() {
         <SheetHead
           code="Our process"
           title="From first walk to final detail."
-          intro="Every Noble Saint project follows a clear five-stage process, from understanding the property and developing the plan through construction, finishing and final handover."
+          intro="Every Noble Saint project follows a clear five-stage process from understanding the property and developing the plan to construction, finishing and final handover."
         />
 
         {/* A single brass rail threads the stages together: one continuous
