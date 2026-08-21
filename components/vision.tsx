@@ -89,7 +89,7 @@ export function Vision() {
       <div className="relative mx-auto w-full max-w-[1440px] px-5 py-plate sm:px-8 lg:px-12">
         <SheetHead
           code="Vision"
-          title="What your property could become."
+          title="Noble Saint | The Collection"
           tone="light-on-dark"
         />
 
