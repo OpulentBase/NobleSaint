@@ -47,18 +47,18 @@ export function Band() {
 
 export function Proof() {
   const points = [
-    { k: "Since 1997", v: "Father and son, nearly 30 years" },
-    { k: "OC & LA", v: "Orange County and Los Angeles" },
-    { k: "Free", v: "On-site estimates, no obligation" },
-    { k: "One crew", v: "The team that starts, finishes" },
+    { k: "Established 1997", v: "30 years of history, family & growth" },
+    { k: "Southern California", v: "Orange County | Los Angeles" },
+    { k: "On-site consultations", v: "Property walk-through scheduled free of commitment" },
+    { k: "Noble Saint", v: "Modern world touch, with old school ways" },
   ];
   return (
     <section className="mx-auto w-full max-w-[1440px] px-5 pt-14 sm:px-8 sm:pt-20 lg:px-12">
       <dl className="grid grid-cols-2 gap-x-5 gap-y-8 border-y border-cypress/12 py-8 sm:gap-x-10 lg:grid-cols-4">
         {points.map((p, i) => (
           <Reveal key={p.k} delay={i * 80} className="flex flex-col gap-1.5">
-            <dt className="font-display text-[1.5rem] leading-none font-light sm:text-[1.85rem]">{p.k}</dt>
-            <dd className="text-[0.85rem] leading-snug text-cypress/65">{p.v}</dd>
+            <dt className="font-display text-[1.25rem] leading-[1.15] font-light text-balance sm:text-[1.5rem]">{p.k}</dt>
+            <dd className="text-[0.82rem] leading-snug text-cypress/65 sm:text-[0.85rem]">{p.v}</dd>
           </Reveal>
         ))}
       </dl>
@@ -73,8 +73,8 @@ export function Scope() {
     <section id="scope" className="relative mx-auto w-full max-w-[1440px] px-5 py-plate sm:px-8 lg:px-12">
       <SheetHead
         code="Our trades"
-        title="Three trades, one crew."
-        intro="Most yards need all three. Keeping them under one contract is what keeps the grade, the stone and the water line working together instead of against each other."
+        title="Outdoor living."
+        intro="We have grown into a complete design and build company. We started with beautiful landscapes, stepped into construction and hardscapes, and now we build just about anything a person could imagine their back yard to be. Let us bring your new dream to life."
       />
 
       <div className="mt-12 grid gap-px border-t border-cypress/12 sm:mt-16 lg:grid-cols-3">
@@ -117,26 +117,33 @@ export function Firm() {
     <section id="firm" className="relative isolate overflow-hidden bg-cypress text-limestone">
       <PaperTooth className="opacity-[0.28]" />
       <div className="relative mx-auto w-full max-w-[1440px] px-5 py-plate sm:px-8 lg:px-12">
-        <SheetHead code="History" title="It started with my father." tone="light-on-dark" />
+        <SheetHead code="History" title="Noble Saint's history." tone="light-on-dark" />
 
         <div className="mt-12 grid gap-12 sm:mt-16 lg:grid-cols-12 lg:gap-16">
           <Reveal className="lg:col-span-7 lg:col-start-1">
             <div className="flex flex-col gap-6 text-[1.0625rem] leading-[1.75] text-limestone/78">
               <p>
-                My father began this business back in 1997. Being his oldest son, I felt the
-                responsibility of helping him take our family business to the next level. I have been
-                learning from him since I was a kid, starting with the fundamentals of the home
-                improvement industry.
+                Our roots in Southern California go back to 1997, when our family first entered the
+                home improvement industry. What started as a trade has grown over nearly three
+                decades into a design and construction company serving the finest neighborhoods in
+                Los Angeles and Orange County.
               </p>
               <p>
-                Today we put his experience and knowledge together with my taste, and that is how we
-                arrive at the design. We are still a team, stronger than ever, with our work standing
-                in some of the most beautiful neighborhoods in Orange County and Los Angeles.
+                Our experience was built in the field, property by property, neighborhood by
+                neighborhood. Over the years we expanded from landscaping into hardscapes, pools and
+                complete outdoor construction, bringing each discipline together under one company
+                and one standard of work.
+              </p>
+              <p>
+                Today, Noble Saint combines decades of hands-on construction knowledge with a modern
+                approach to design and project execution. Our work can be found throughout Los
+                Angeles and Orange County, the communities where we began, where we continue to
+                build, and where our reputation matters most.
               </p>
               <p className="text-limestone/95">
-                It has never been easy. We will never settle, and we will keep improving so our clients
-                get the treatment and the quality they deserve. We are here to serve and elevate our
-                community, one property at a time.
+                We remain grounded in the principles that built the company from the beginning:
+                thoughtful design, disciplined construction and respect for every property entrusted
+                to us. As Noble Saint continues to grow, those principles will remain unchanged.
               </p>
             </div>
 
@@ -161,11 +168,12 @@ export function Firm() {
 /** A drafted datum line: the two generations, plotted against real years. */
 function Timeline() {
   const marks = [
-    { year: "1997", label: "Father breaks ground on the first job" },
-    { year: "2011", label: "Pool construction added to the scope" },
-    { year: "2019", label: "Second generation takes on design" },
-    { year: "Today", label: "Still one crew, still one name" },
+    { year: "1997", label: "Father breaks ground on his first landscaping project in California" },
+    { year: "2010", label: "We begin offering construction services" },
+    { year: "2016", label: "I begin helping my father run the business and introduce our company to the modern world" },
+    { year: "2026", label: "Lots of story, same family. New name." },
   ];
+
 
   return (
     <div className="border border-limestone/15 p-7 sm:p-9">
@@ -205,8 +213,8 @@ export function Sequence() {
       <div className="relative mx-auto w-full max-w-[1440px] px-5 py-plate sm:px-8 lg:px-12">
         <SheetHead
           code="Our process"
-          title="Five stages, start to handover."
-          intro="Order decides everything in this trade. Here is how a project runs, and where you hear from us in each stage."
+          title="From first walk to final detail."
+          intro="Every Noble Saint project follows a clear five-stage process, from understanding the property and developing the plan through construction, finishing and final handover."
         />
 
         {/* A single brass rail threads the stages together: one continuous
