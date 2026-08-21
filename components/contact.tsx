@@ -15,9 +15,9 @@ export function Contact() {
       <div className="relative mx-auto w-full max-w-[1440px] px-5 py-plate sm:px-8 lg:px-12">
         <SheetHead
           code="Get started"
-          title="Call or text Noble Saint."
+          title="Call or text NOBLE SAINT"
           tone="light-on-dark"
-          intro="You get a hold of the company directly, not a call center. Tell us where the property is and what you have in mind for your project. Let us set a time to come look at your property and get things going. Allow us to take care of your home and give it the love it deserves."
+          intro="You get a hold of the company directly, not a call center. Tell us where the property is and what you have in mind for your project. Let's set a time to come look at your property and get things going. Allow us to take care of your home and give it the love it deserves."
         />
 
         <div className="mt-12 grid gap-12 lg:mt-16 lg:grid-cols-12 lg:gap-16">
@@ -60,8 +60,8 @@ export function Contact() {
           <Reveal delay={140} className="lg:col-span-5">
             <dl className="flex flex-col divide-y divide-limestone/15 border-y border-limestone/15">
               <Meta term="Who answers" detail="Our Noble Saint team directly." />
-              <Meta term="Service area" detail="Southern California." />
-              <Meta term="Consultations" detail="Schedule via call or text, free of commitment." />
+              <Meta term="Service Area" detail="Southern California" />
+              <Meta term="Consultations" detail="Schedule via call or text free of commitment." />
               <Meta
                 term="Typical reply"
                 detail="Same day, including evenings. Excluding holidays."
