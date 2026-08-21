@@ -11,7 +11,7 @@ export function Footer() {
           <div className="flex flex-col gap-6">
             <WordmarkStacked className="text-cypress" />
             <p className="max-w-[34ch] text-[0.95rem] leading-relaxed text-cypress/70">
-              {site.tagline} Serving {site.regionLong} since {site.founded}.
+              Serving {site.regionLong} since {site.founded}.
             </p>
           </div>
 
